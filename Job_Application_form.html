@@ -7,15 +7,16 @@
     <title>Job Application form</title>
 
     <style>
-        body{
+        body {
             font-family: Arial, sans-serif;
-            
+
         }
+
         .container {
             width: 90%;
             margin: auto;
             padding: 20px;
-            /* border: 1px solid black; */
+           
             border-radius: 10px;
         }
 
@@ -40,13 +41,13 @@
             margin: 10px 0;
             border: 1px solid black;
             border-radius: 5px;
-        } 
+        }
 
         input[type="radio"] {
             margin: 10px;
         }
 
-        input[type="reset"],
+       
         input[type="submit"] {
             padding: 10px;
             margin: 10px 0;
@@ -62,21 +63,21 @@
             background-color: #0056b3;
         }
 
-        .box{
+        .box {
 
-           
+
             width: 50%;
-          
+
         }
-        .box input{
+
+        .box input {
             width: 90%;
         }
-        .test{
+
+        .test {
             display: flex;
             justify-content: space-between;
         }
-        
-
     </style>
 </head>
 
@@ -90,57 +91,58 @@
                 <div class="box">
 
                     <label for="first_name">First Name:</label>
-                    <input  type="text" name="first_name" id="first_name" placeholder="First Name">
-                    
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name">
+
                 </div>
                 <div class="box">
                     <label for="last_name">Last Name:</label>
-                    <input  type="text" name="last_name" id="last_name" placeholder="Last Name">
-                    
-    
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+
+
                 </div>
             </div>
-           
 
 
 
-           <label for="email">Email:</label>
+
+            <label for="email">Email:</label>
             <input type="email" name="email" id="email" placeholder="Email">
             <label for="portfolio">Portfolio Website:</label>
             <input type="text" name="portfolio" id="portfolio" placeholder="Portfolio Website">
             <label for="position">Position you are applying for:</label>
             <input type="text" name="position" id="position" placeholder="Position you are applying for">
-           
+
             <div class="test">
 
                 <div class="box"> <label for="salary">Salary Requirement:</label>
                     <input type="text" name="salary" id="salary" placeholder="Salary Requirement">
-                   </div>
+                </div>
                 <div class="box"><label for="start">When can you start?</label>
                     <input type="date" name="start" id="start" placeholder="When can you start?">
-                    </div>
+                </div>
             </div>
-           
-<div class="test">
 
-    <div class="box"> <label for="phone">Phone:</label>
-        <input type="tel" name="phone" id="phone" placeholder="Phone">
-       </div>
-    <div class="box"> <label for="fax">Fax:</label>
-        <input type="tel" name="fax" id="fax" placeholder="Fax">
-       </div>
-</div>
+            <div class="test">
+
+                <div class="box"> <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone">
+                </div>
+                <div class="box"> <label for="fax">Fax:</label>
+                    <input type="tel" name="fax" id="fax" placeholder="Fax">
+                </div>
+            </div>
 
             <label for="relocate">Are you Willing to relocate?</label><br>
             <input type="radio" name="relocate" id="relocate" value="Yes">Yes
             <input type="radio" name="relocate" id="relocate" value="No">No
-            <input type="radio" name="relocate" id="relocate" value="Maybe">Maybe<br><br>
+            <input type="radio" name="relocate" id="relocate" value="Not sure">Not Sure<br><br>
             <label for="last_company">Last Company Worked For:</label>
             <input type="text" name="last_company" id="last_company" placeholder="Last Company Worked For"><br>
             <label for="reference">Reference / Comments / Questions:</label>
             <textarea name="reference" id="reference" cols="30" rows="10"
                 placeholder="Reference / Comments / Questions"></textarea><br>
-            <input style="margin-left: 35%;width: 25%;padding: 20px;font-weight: bolder;" type="submit" value="Submit">
+            <input style="margin-left: 35%;width: 25%;padding: 20px;font-weight: bolder;" type="submit"
+                value="Send Application">
 
         </form>
     </div>
