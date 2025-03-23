@@ -1,83 +1,183 @@
 <DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact Us Design</title>
-    <style>
-        body{
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>contact Us Design</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
 
 
-        div{
-            width: 50%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: skyblue;
-        }
-        h1{
-            font-weight: bold;
-            font-size: 24px;
-            margin: 10px ;
-            text-align: left;
-        }
-        form{
-            text-align: center;
-        }
-        input{
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-            border: 1px solid #007bff;
-            width:90% ;
-            display: block;
-        }
-        input::placeholder{
-            font-size: 14px;
-            font-weight: bold;
-        }
-        button {
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-            border: 1px solid skyblue;
-            width: 90%;
-            display: block;
-            background-color: whitesmoke;
-            color: black;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    
-   
-    <div>
-        <h1>Contact Now</h1>
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Password">
-            <input type="text" placeholder="Department">
-            <input type="text" placeholder="Message">
+            .div1 {
+                width: 40%;
+                margin:10% auto;
+                padding: 50px 50px 50px 50px;
+                background-color: skyblue;
+            }
 
-            <button>Send</button>
-        </form>
-</div>
+            h1 {
+                font-weight: bold;
+                font-size: 24px;
+                margin: 10px;
+                text-align: left;
+            }
+
+            form {
+                text-align: center;
+            }
+
+            input,
+            select,
+            textarea {
+                padding: 10px;
+                margin: 10px;
+                border-radius: 5px;
+                border: 1px solid whitesmoke;
+                box-shadow: 0px 0px 10px 0px whitesmoke;
+                width: 90%;
+                display: block;
+            }
+
+            option {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border: 1px solid whitesmoke;
+                padding: 10px;
+                box-shadow: 0px 0px 10px 0px whitesmoke;
+            }
+
+            input::placeholder {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            button {
+                padding: 10px;
+                margin: 10px;
+                border-radius: 5px;
+                border: 1px solid skyblue;
+                width: 90%;
+                display: block;
+                background-color: whitesmoke;
+                color: black;
+                text-align: center;
+            }
+
+            .social {
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .social a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #333;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 5px;
+                transition: .5s;
+            }
+
+            .social a i {
+                margin-right: 10px;
+            }
+
+            .social a.facebook {
+                background: #3b5998;
+            }
+
+            .social a.twitter {
+                background: #55acee;
+            }
+
+            .social a:hover {
+                transform: translateY(-5px);
+            }
+
+            .div2 {
+                width: 50%;
+                margin: 0 auto;
+                padding: 20px;
+                border: 2px solid white;
+                box-shadow: 0px 10px 10px 0px whitesmoke;
+
+            }
+
+            .container {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+
+
+            <div class="div1">
+                <h1>Contact Now</h1>
+                <form class="form1">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Password">
+                    <input type="text" placeholder="Department">
+                    <input type="text" placeholder="Message">
+
+                    <button>Send</button>
+                </form>
+            </div>
 
 
 
 
-<!-- a form with four social logins facebook , twiter, instagram , google+
-an input field for email and password and each input also have appropriate icons
-a select field for department with options of IT, HR, Finance, Marketing, Sales
-a textarea for message
-and resposive layout and minimalist design and fully resposive div 
+            <br>
+            <div class="div2">
 
--->
+                <div class="social">
+                    <a href="#" class="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </a>
+                    <a href="#" class="twitter">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </a>
+                </div>
+
+                <form class="form2">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <select name="department" id="department">
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Sales">Sales</option>
+                    </select>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button>Send</button>
+                </form>
 
 
 
-</body>
-</html>
+            </div>
+
+
+        </div>
+
+    </body>
+
+    </html>
