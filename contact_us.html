@@ -11,14 +11,65 @@
             body {
                 margin: 0;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #f5f5f5;
             }
 
+            .container {
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px;
+                flex-wrap: wrap;
+            }
+
+            .div1, .div2 {
+                width: 40%;
+                min-width: 300px;
+                padding: 30px;
+                margin: 20px;
+                border-radius: 10px;
+                height: 550px;
+                box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+            }
 
             .div1 {
-                width: 40%;
-                margin:10% auto;
-                padding: 50px 50px 50px 50px;
                 background-color: skyblue;
+            }
+
+            .div2 {
+                background-color: white;
+                box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+            }
+
+            .input-group {
+                position: relative;
+                margin-bottom: 20px;
+            }
+
+            .input-group i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+            }
+
+            .div2 input,
+            .div2 select,
+            .div2 textarea {
+                padding: 10px 10px 10px 40px;
+                width: 100%;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+
+            @media screen and (max-width: 768px) {
+                .div1, .div2 {
+                    width: 90%;
+                    margin: 10px auto;
+                }
             }
 
             h1 {
@@ -57,21 +108,26 @@
             }
 
             button {
-                padding: 10px;
-                margin: 10px;
+                padding: 12px;
+                margin: 20px 0;
                 border-radius: 5px;
-                border: 1px solid skyblue;
-                width: 90%;
-                display: block;
-                background-color: whitesmoke;
-                color: black;
-                text-align: center;
+                border: none;
+                width: 100%;
+                background-color: #45a2d6;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #27abf8;
             }
 
             .social {
                 display: flex;
                 justify-content: center;
-                margin: 20px 0;
+                
             }
 
             .social a {
@@ -98,26 +154,46 @@
             .social a.twitter {
                 background: #55acee;
             }
+            a.insta{
+                background: #ee8d9e;
+            }
+            a.googlep{
+                background: #dd4b39;
+            }
 
             .social a:hover {
                 transform: translateY(-5px);
             }
 
-            .div2 {
-                width: 50%;
-                margin: 0 auto;
-                padding: 20px;
-                border: 2px solid white;
-                box-shadow: 0px 10px 10px 0px whitesmoke;
-
+     .form1 .input-group {
+                position: relative;
+                margin-bottom: 20px;
+                width: 100%;
             }
 
-            .container {
+            .form1 input,
+            .form1 textarea {
+                padding: 10px 10px 10px 40px;
                 width: 100%;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .form1 .input-group i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+            }
+            textarea::placeholder{
+                padding-top: 30px;
+            }
+            .div2 form .social{
+                text-align: center;
+                margin-top: 0;
 
             }
         </style>
@@ -126,21 +202,28 @@
     <body>
         <div class="container">
 
-
             <div class="div1">
                 <h1>Contact Now</h1>
                 <form class="form1">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Password">
-                    <input type="text" placeholder="Department">
-                    <input type="text" placeholder="Message">
-
-                    <button>Send</button>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-building"></i>
+                        <input type="text" placeholder="Department">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-comment"></i>
+                        <textarea name="message" rows="5" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit">Send</button>
                 </form>
             </div>
-
-
-
 
             <br>
             <div class="div2">
@@ -148,33 +231,52 @@
                 <div class="social">
                     <a href="#" class="facebook">
                         <i class="fab fa-facebook-f"></i>
-                        Facebook
+                       
                     </a>
                     <a href="#" class="twitter">
                         <i class="fab fa-twitter"></i>
-                        Twitter
+                        
                     </a>
+                    <a href="#" class="insta">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="googlep">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                    
                 </div>
 
                 <form class="form2">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <select name="department" id="department">
-                        <option value="IT">IT</option>
-                        <option value="HR">HR</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Sales">Sales</option>
-                    </select>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-building"></i>
+                        <select name="department" id="department">
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Sales">Sales</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-comment"></i>
+                        <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
+                    </div>
                     <button>Send</button>
                 </form>
 
-
-
             </div>
-
 
         </div>
 
